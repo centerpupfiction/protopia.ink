@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Protopia - Home</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap');
+
+body {
+    background-color: #101266;
+    color: #FFFFFF;
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 20px 20px 20px 220px;
+    line-height: 1.8;
+    font-size: 18px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #101266;
+    padding: 60px 0;
+    box-sizing: border-box;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin-bottom: 10px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #6c63ff;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+}
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #ff9ed8;
+    color: #0a0840;
+    border-color: #ff9ed8;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+.pink {
+    color: #FFC0CB;
+    font-weight: 700;
+}
+
+.highlight {
+    background-color: rgba(255, 192, 203, 0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.definitions .pink {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 20px;
+    min-height: 50vh;
+}
+
+.section-with-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.section-with-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- REPLACED: overlay rules (inserted exactly as requested) --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    padding: 40px 40px 20px 60px;
+}
+
+/* Move the text block to the right so it sits over the sky area */
+.overlay h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    text-transform: lowercase;
+    color: white;
+    text-shadow:
+        2px 2px 0px #001122,
+        4px 4px 0px #002244,
+        6px 6px 0px #003366,
+        1px 1px 4px rgba(0,0,0,0.6);
+    margin-bottom: 0.3em;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', monospace;
+    text-align: left;
+    line-height: 1.4;
+    max-width: 60%;
+    word-wrap: break-word;
+
+    /* the key new part */
+    margin-left: 40%;  
+}
+
+/* On smaller screens, reset so text recenters */
+@media (max-width: 1024px) {
+    .overlay h1 {
+        margin-left: 10%;
+        max-width: 75%;
+    }
+}
+@media (max-width: 768px) {
+    .overlay h1 {
+        margin-left: 5%;
+        max-width: 85%;
+    }
+}
+/* --- end replaced section --- */
+
+.overlay h1 .title-pink {
+    color: #ff9ed8;
+}
+
+.definition {
+    margin-top: 10px;
+    max-width: 85%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    background: rgba(13, 10, 74, 0.6);
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+
+}
+
+.definition .term {
+    color: #ff9ed8;
+    font-weight: 700;
+}
+
+.definition .desc-highlight {
+    color: #c8d7ff;
+    font-weight: 600;
+}
+
+.section-blue {
+    background-color: #101266;
+}
+
+.home-section, .definitions, .links-section, .reading-list-section {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.home-section {
+    text-align: center;
+}
+
+.definitions p, .links-section p, .reading-list-section p {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #FFC0CB;
+    background: rgba(255, 192, 203, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.definitions .highlight {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.video-section {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.video-embed {
+    width: 100%;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    border: 2px solid #FFC0CB;
+    border-radius: 8px;
+    background: rgba(255, 192, 203, 0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.links-section h2, .reading-list-section h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.box {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.red-box {
+    background-color: #E53935;
+}
+
+.dark-blue-box {
+    background-color: #1976D2;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 20px 20px 0;
+    }
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar li {
+        margin: 10px;
+    }
+    .content-wrapper {
+        border-left: none;
+        border-right: none;
+    }
+    .section {
+        padding: 10px;
+    }
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    /* keep small-screen overlay padding and alignment (matches replaced rules above) */
+    .overlay {
+        padding: 10px;
+        padding-top: 30px;
+        align-items: flex-start;  
+        padding-left: 5%;  
+    }
+    .overlay h1 {
+        font-size: 1.5em;
+        transform: translateX(-0.5em);
+        letter-spacing: 0.5px;
+        max-width: 85%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        /* margin-left will be overridden by the earlier media queries for 768px */
+    }
+    .box-container {
+        flex-direction: column;
+    }
+    .box {
+        height: 200px;
+    }
+}
+</style>
+</head>
+
+<body>
+<nav class="sidebar">
+<ul>
+<li><a href="newindex.html" class="active">home</a></li>
+<li><a href="about.html">about protopia.ink</a></li>
+<li><a href="protopian-fiction.html">about protopian fiction</a></li>
+<li><a href="protopian-stories.html">protopian stories</a></li>
+<li><a href="digital-protopias.html">digital protopias</a></li>
+<li><a href="protopian-media.html">protopian media</a></li>
+<li><a href="reading-list.html">reading list</a></li>
+<li><a href="links.html">links</a></li>
+</ul>
+</nav>
+
+<div class="content-wrapper">
+<main>
+<div class="section section-with-image">
+  <img src="https://cdn.midjourney.com/b6d65fa3-6c1a-4188-9ecb-72b47da27e63/0_1.png" alt="Futuristic scene">
+  <div class="overlay">
+    <section class="home-section">
+      <div class="logo">
+        <svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="wave" d="M0,50 Q50,0 100,50 T200,50" fill="none" stroke="#FFC0CB" stroke-width="2"/>
+          </defs>
+          <use xlink:href="#wave" opacity="0.7"/>
+          <use xlink:href="#wave" transform="translate(0,-20)" opacity="0.5"/>
+          <circle cx="50" cy="25" r="7" fill="#FFC0CB" opacity="0.8">
+            <animate attributeName="r" values="7;11;7" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="25" r="7" fill="#FFC0CB" opacity="0.6">
+            <animate attributeName="r" values="7;11;7" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+
+      <h1>
+        Welcome to Protopia,<br>
+        the Future Island,<br>
+        of Achievability,<br>
+        where Writing fuses<br>
+        with Concepts and Endeavours.
+      </h1>
+    </section>
+  </div>
+</div>
+</main>
+</div>
+</body>
+</html>
