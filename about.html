@@ -1,1 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Protopia - About Protopia.ink</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap');
 
+body {
+    background-color: #101266;
+    color: #FFFFFF;
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 20px 20px 20px 220px;
+    line-height: 1.8;
+    font-size: 18px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #101266;
+    padding: 60px 0;
+    box-sizing: border-box;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin-bottom: 10px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #6c63ff;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+}
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #ff9ed8;
+    color: #0a0840;
+    border-color: #ff9ed8;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+.pink {
+    color: #FFC0CB;
+    font-weight: 700;
+}
+
+.highlight {
+    background-color: rgba(255, 192, 203, 0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.definitions .pink {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 20px;
+    min-height: 50vh;
+}
+
+.definition {
+    margin-top: 10px;
+    max-width: 85%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    background: rgba(13, 10, 74, 0.6);
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.definition .term {
+    color: #ff9ed8;
+    font-weight: 700;
+}
+
+.definition .desc-highlight {
+    color: #c8d7ff;
+    font-weight: 600;
+}
+
+.section-blue {
+    background-color: #101266;
+}
+
+.definitions {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.definitions p {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #FFC0CB;
+    background: rgba(255, 192, 203, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.definitions .highlight {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 20px 20px 0;
+    }
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar li {
+        margin: 10px;
+    }
+    .content-wrapper {
+        border-left: none;
+        border-right: none;
+    }
+    .section {
+        padding: 10px;
+    }
+    body {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+</style>
+</head>
+
+<body>
+<nav class="sidebar">
+<ul>
+<li><a href="index.html">home</a></li>
+<li><a href="about.html" class="active">about protopia.ink</a></li>
+<li><a href="protopian-fiction.html">about protopian fiction</a></li>
+<li><a href="protopian-stories.html">protopian stories</a></li>
+<li><a href="digital-protopias.html">digital protopias</a></li>
+<li><a href="protopian-media.html">protopian media</a></li>
+<li><a href="reading-list.html">reading list</a></li>
+<li><a href="links.html">links</a></li>
+</ul>
+</nav>
+
+<div class="content-wrapper">
+<main>
+<div class="page" id="about">
+<div class="section section-blue">
+  <section class="definitions">
+    <h2 class="pink">About Protopia.ink</h2>
+    <p>This internet site aims to be a third way portal to Protopia, the island of achievability, where writing fuses with concepts and ideas. With the polarisation now going on in the world, how are we ever to meet in the middle, and get along, even in this 'progressiveness' of today, which appears to work in tandem with regressiveness,  let alone in a future filled with robots? The site started with aspirations to be the new digital 'Granta' of optimistic futuristic fiction and non-fiction, and now brings in the idea of fusing protopian writing (again, think digital, futuristic'Granta' meets digital 'Wired') with active protopian builders, digital inventors, and live protopian communities, in the hope that a synergistic smelting will result. Once the site is up and running in full, interviews, reviews and group video conferences will provide a significant proportion of the content, covering new fiction, new non-fiction, and real-life web communities and such like as they develop. The language of protopian visions needs to be honed and forged in a crucible of both thought and action, where doers and entrepreneurs join with thinkers and writers to create stronger prototypes. Here we curate stories, ideas and media that reflect the evolving landscape of tomorrow. </p>
+    <div class="definition">
+      <span class="term">post-utopian:</span> <span class="desc-highlight">the exhale after utopia's dream—futures fade into realities, trading grand blueprints for the sometimes beautiful, sometimes ugly, chaos of what-is-next.</span>
+    </div>
+    <div class="definition">
+      <span class="term">protopian:</span> <span class="desc-highlight">the quiet thrill of incremental wins in the gritty glow of "better than yesterday," one prototype at a time.</span>
+    </div>
+  </section>
+</div>
+</div>
+
+<div style="text-align: center; padding: 20px; border-top: 1px solid #FFC0CB;">
+  <a href="index.html" style="color: #ff9ed8; text-decoration: none; font-weight: bold;">← Back to Home</a>
+</div>
+</main>
+</div>
+</body>
+</html>
